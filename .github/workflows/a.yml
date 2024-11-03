@@ -1,4 +1,4 @@
-name: "1번"
+name: "a"
 
 on:
   workflow_dispatch:  # 수동 실행을 가능하게 하는 트리거
@@ -7,8 +7,8 @@ on:
       - main
 
 jobs:
-  tttt:
+  a:
     runs-on: ubuntu-latest
     steps:
-      - name: 1번 워크플로우 실행
-        run: echo "1번 워크플로우가 실행되었습니다."
+      - name: a 워크플로우 실행
+        run: echo "a 워크플로우가 실행되었습니다."

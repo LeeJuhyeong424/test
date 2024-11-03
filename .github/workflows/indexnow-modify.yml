@@ -1,10 +1,9 @@
 name: "IndexNow 수정"
 
 on:
-  workflow_dispatch:  # 수동 실행을 가능하게 하는 트리거
-  push:
-    branches:
-      - main
+  repository_dispatch:
+    types:
+      - indexnow-modify
 
 concurrency:
   group: indexnow-workflow-group

@@ -1,0 +1,36 @@
+name: "IndexNow"
+
+on:
+  workflow_dispatch:  # 수동 실행을 가능하게 하는 트리거
+  push:
+    branches:
+      - main
+
+
+jobs:
+  a:
+    runs-on: ubuntu-latest
+    steps:
+      - name: b 워크플로우 실행
+        run: echo "b 워크플로우가 실행되었습니다."
+
+      - name: Pages 배포 워크플로우 호출
+        run: |
+          curl -X POST -H "Accept: application/vnd.github+json" \
+               -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+               https://api.github.com/repos/${{ github.repository }}/dispatches \
+               -d "{\"event_type\": \"indexnow-add\"}"
+
+      - name: Pages 배포 워크플로우 호출
+        run: |
+          curl -X POST -H "Accept: application/vnd.github+json" \
+               -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+               https://api.github.com/repos/${{ github.repository }}/dispatches \
+               -d "{\"event_type\": \"indexnow-delete\"}"
+
+      - name: Pages 배포 워크플로우 호출
+        run: |
+          curl -X POST -H "Accept: application/vnd.github+json" \
+               -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+               https://api.github.com/repos/${{ github.repository }}/dispatches \
+               -d "{\"event_type\": \"indexnow-delete\"}"

@@ -1,4 +1,4 @@
-name: "e"
+name: "페이지"
 
 on:
   push:
@@ -13,7 +13,7 @@ on:
 
 concurrency:
   group: indexnow-workflow-group
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   e:

@@ -6,6 +6,10 @@ on:
     branches:
       - main
 
+concurrency:
+  group: indexnow-workflow-group
+  cancel-in-progress: false
+
 jobs:
   a:
     runs-on: ubuntu-latest

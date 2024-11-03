@@ -11,6 +11,10 @@ on:
     types:
       - completed
 
+concurrency:
+  group: indexnow-workflow-group
+  cancel-in-progress: false
+
 jobs:
   e:
     runs-on: ubuntu-latest

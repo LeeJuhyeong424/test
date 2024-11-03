@@ -3,7 +3,7 @@ name: "2번"
 on:
   workflow_dispatch:  # 수동 실행을 가능하게 하는 트리거
   workflow_run:
-    workflows: ["1-1번", "1-2번", "1-3번"]  # 다른 워크플로우가 완료된 후 실행
+    workflows: ["11번", "12번", "13번"]  # 다른 워크플로우가 완료된 후 실행
     types:
       - completed
 

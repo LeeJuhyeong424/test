@@ -1,15 +1,15 @@
 name: "1-1번"
 
 on:
+  on:
   workflow_dispatch:  # 수동 실행을 가능하게 하는 트리거
-  workflow_run:
-    workflows: ["공개 저장소로 빌드 및 배포"]  # 다른 워크플로우가 완료된 후 실행
-    types:
-      - completed
+  push:
+    branches:
+      - main
 
 jobs:
   tttt:
     runs-on: ubuntu-latest
     steps:
-      - name: B 워크플로우 실행
-        run: echo "B 워크플로우가 실행되었습니다."
+      - name: 1-1번 워크플로우 실행
+        run: echo "1-1번 워크플로우가 실행되었습니다."

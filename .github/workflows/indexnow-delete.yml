@@ -1,4 +1,4 @@
-name: "b"
+name: "IndexNow 삭제"
 
 on:
   workflow_dispatch:  # 수동 실행을 가능하게 하는 트리거

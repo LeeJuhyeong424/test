@@ -3,7 +3,7 @@ name: "B 워크플로우"
 on:
   workflow_dispatch:  # 수동 실행을 가능하게 하는 트리거
   workflow_run:
-    workflows: ["pages-deploy"]  # 다른 워크플로우가 완료된 후 실행
+    workflows: ["공개 저장소로 빌드 및 배포"]  # 다른 워크플로우가 완료된 후 실행
     types:
       - completed
 

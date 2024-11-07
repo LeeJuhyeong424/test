@@ -1,14 +1,21 @@
 name: "페이지"
 
 on:
-  workflow_dispatch:  # 수동 실행을 가능하게 하는 트리거
   workflow_run:
-    workflows:
-      - "IndexNow 추가"
-      - "IndexNow 수정"
-      - "IndexNow 삭제"
+    workflows: ["IndexNow 추가"]
     types:
-      - success
+      - completed
+
+  workflow_run:
+    workflows: ["IndexNow 수정"]
+    types:
+      - completed
+
+  workflow_run:
+    workflows: ["IndexNow 삭제"]
+    types:
+      - completed
+
 
 concurrency:
   group: indexnow-workflow-group

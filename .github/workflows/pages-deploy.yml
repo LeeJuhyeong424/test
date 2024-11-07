@@ -3,7 +3,10 @@ name: "페이지"
 on:
   workflow_dispatch:  # 수동 실행을 가능하게 하는 트리거
   workflow_run:
-    workflows: ["IndexNow 추가", "IndexNow 수정", "IndexNow 삭제"]  # 다른 워크플로우가 완료된 후 실행
+    workflows:
+      - "IndexNow 추가"
+      - "IndexNow 수정"
+      - "IndexNow 삭제"
     types:
       - completed
 

@@ -8,7 +8,7 @@ on:
       - "IndexNow 수정"
       - "IndexNow 삭제"
     types:
-      - completed
+      - success
 
 concurrency:
   group: indexnow-workflow-group
